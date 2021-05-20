@@ -24,6 +24,8 @@
                                 type="button"
                                 href="https://www.causepilot.com"
                                 target="_blank"
+                                data-target="#test"
+                                data-toggle="modal"
                             >
                                 Learn More
                             </a>
@@ -67,4 +69,6 @@
             </p>
         </div>
     </div>
+    
+    {% include 'BidcozCoreBundle::_modal.html.twig' with { id: 'test', title: 'Test', content: 'This is a test modal for Ilya', size: '' } %}
 {% endblock %}
