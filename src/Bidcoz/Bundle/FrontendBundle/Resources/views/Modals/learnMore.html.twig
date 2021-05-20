@@ -1,0 +1,22 @@
+{# TODO: The existing modal macro and the BidcozCoreBundle::_modal.html.twig template did not look good.
+        That's why I created a new modal for the test.
+#}
+<div id="learn-more-modal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content mx-auto">
+            <div class="modal-close float-right" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+                {% include 'BidcozCoreBundle:Components:icon.html.twig' with { icon: 'close' } %}
+            </div>
+            <div class="modal-header py-0">
+                <h4 class="modal-title mt-0">Learn More</h4>
+                <h5 class="modal-subtitle">Take your mission to new heights</h5>
+            </div>
+            <div class="modal-body">
+                The auction & event fundraising software that helps you raise money on the fly and makes the most of every giving opportunity.
+            </div>
+            <div class="modal-footer pb-0">
+                <button type="button" class="btn btn-clear modal-close" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,14 @@
             <div class="panel h-100">
                 <div class="panel-body">
                     <h4>Welcome to the CausePilot Playground</h4>
+
+                    <p class="lead">
+                        {{ truncateText('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 350) }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -16,17 +24,18 @@
             <div class="panel h-100">
                 <div class="panel-body">
                     <h4 class="mb-5 p-1">Interested in becoming a CausePilot?</h4>
-                    
+
                     <div class="actions pt-5">
                             <a
                                 id="learn-more"
                                 class="btn full-width"
                                 type="button"
-                                href="https://www.causepilot.com"
-                                target="_blank"
+                                data-toggle="modal"
+                                data-target="#learn-more-modal"
                             >
                                 Learn More
                             </a>
+                            {% include 'BidcozFrontendBundle:Modals:learnMore.html.twig' %}
                         </div>
                 </div>
             </div>

@@ -12,6 +12,10 @@ class UserRepository
 
         $address = new Address();
         $address->setAddress1('123 ABC Street');
+        $address->setAddress2('floor 1, apartment 1');
+        $address->setCity('New York');
+        $address->setState('New York');
+        $address->setZip('10000');
 
         $user->setAddress($address);
 
