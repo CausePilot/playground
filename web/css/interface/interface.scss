@@ -7,8 +7,19 @@
 @import "../causepilot/globals.scss";
 
 body {
-    background-color: $color-maximum-blue;
+    background-color: $bg-color-ilya;
 }
+
+// css variable
+/*
+    :root {
+        --bg-color: #555555;
+    }
+
+    body {
+        background-color: var(--bg-color);
+    }
+*/
 
 header.header {
     height: 11rem;
