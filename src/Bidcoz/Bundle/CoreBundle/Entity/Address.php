@@ -2,45 +2,50 @@
 
 namespace Bidcoz\Bundle\CoreBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serialize;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * A Value object for an address.
  *
- * @ORM\Embeddable
+ * @Serialize\ExclusionPolicy("all")
  */
 class Address
 {
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\NotBlank(groups={"Profile"})
      * @Assert\Length(max=255, groups={"Profile"})
+     * @Serialize\Expose
+     * @Serialize\SerializedName("address1")
      */
     protected $address1;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Serialize\Expose
+     * @Serialize\SerializedName("address2")
      */
     protected $address2;
 
     /**
-     * @ORM\Column(type="string", length=128, nullable=true)
      * @Assert\NotBlank(groups={"Profile"})
      * @Assert\Length(max=128, groups={"Profile"})
+     * @Serialize\Expose
+     * @Serialize\SerializedName("city")
      */
     protected $city;
 
     /**
-     * @ORM\Column(type="string", length=2, nullable=true)
      * @Assert\NotBlank(groups={"Profile"})
+     * @Serialize\Expose
+     * @Serialize\SerializedName("state")
      */
     protected $state;
 
     /**
-     * @ORM\Column(type="string", length=5, nullable=true)
      * @Assert\NotBlank(groups={"Profile"})
      * @Assert\Regex(pattern="/\d{5}/", groups={"Profile"})
+     * @Serialize\Expose
+     * @Serialize\SerializedName("zip")
      */
     protected $zip;
 
